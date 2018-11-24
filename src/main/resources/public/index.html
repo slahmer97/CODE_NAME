@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="modal.css" type="text/css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class='wrapper'>
+      <img src='codenames.png' style='width: 350px;'/>
+      <ul>
+        <li><a href='new_game.html' onclick="setGameType('NEW')">NEW GAME</a></li>
+        <li><a href='join_game.html'onclick="setGameType('JOIN')">JOIN GAME</a></li>
+        <li><a href='option.html'>OPTION</a></li>
+      </ul>
+    </div>
+
+    <div id="modal-container" class="visible">
+      <div class="modal-background">
+        <div class="modal" style="width: 30%;">
+          <h2 id="end_game">ENTER NAME:</h2>
+          <input id ='player_name' class='cd' type='text' name='player_name' placeholder='YOUR NAME' style="width: 60%">
+          <input class='cd' type='button' name='submit' value='OK' onclick="setPlayerName()">
+        </div>
+      </div>
+    </div>
+
+  <script type="text/javascript">
+    var setGameType = function (game) {
+        localStorage.setItem("GAMETYPE",game);
+    }
+
+    var setPlayerName = function (){
+        var name = document.getElementById('player_name');
+        if(name.value != "") {
+            localStorage.setItem("PLAYERNAME", name.value);
+            document.querySelector("#modal-container").classList.remove("visible");
+        } else
+            alert("You must enter a valid name");
+    }
+
+  </script>
+  </body>
+
+</html>

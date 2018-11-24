@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link href="style.css" type="text/css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class='wrapper'>
+      <img src='codenames.png' style='width: 350px;'/>
+      <div id='game_code'></div>
+      <ul>
+        <li value="TEAM1"><div class='btn' onclick="setTeam('TEAM1')">RED TEAM</div></li>
+        <li value="TEAM2"><div class='btn' onclick="setTeam('TEAM2')">BLUE TEAM</div></li>
+        <li><a href='Player.html' >READY!</a></li>
+      </ul>
+    </div>
+  </body>
+
+  <script type="application/javascript">
+    setTeam = function(ss){
+        localStorage.setItem("TEAM",ss);
+    }
+  </script>
+</html>

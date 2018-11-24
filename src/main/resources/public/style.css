@@ -1,0 +1,51 @@
+html, body
+{
+  width: 100%;
+  margin: 0px;
+  font-family: sans-serif;
+}
+
+.wrapper
+{
+  margin-top: 5%;
+  text-align: center;
+}
+
+ul
+{
+  width: 100%;
+  padding: 0px;
+  list-style: none;
+  display: inline-table;
+}
+
+li
+{
+  margin-bottom: 2%;
+}
+
+h2
+{
+  color: #595959;
+}
+
+.cd
+{
+  padding: 10px;
+  color: #595959;
+  font-weight: bold;
+  border: 1px solid #666666;
+}
+
+a, .btn
+{
+  width: 20%;
+  padding: 1%;
+  display: block;
+  margin: auto;
+  color: #595959;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #666666;
+  background-color: #F2F2F2;
+}

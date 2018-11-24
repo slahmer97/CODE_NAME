@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link href="style.css" type="text/css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class='wrapper'>
+      <img src='codenames.png' style='width: 350px;'/>
+      <h2>INSERT GAME ID</h2>
+      <div>
+        <input id ='game_code' class='cd' type='text' name='game_code' placeholder='code here' style="width: 15%">
+        <input class='cd' type='button' name='submit' value='OK' onclick='setGameCode()'>
+      </div>
+    </div>
+  <script type="application/javascript">
+    setGameCode = function (){
+        var code = document.getElementById('game_code');
+        localStorage.setItem("CODE",code.value);
+        window.location.href = 'multiplayer.html';
+    }
+  </script>
+  </body>
+
+</html>
